@@ -1,40 +1,24 @@
 import "./App.css";
-import AboutMe from "./components/AboutMe";
-import { Contact } from "./components/Contact";
-
-import Darkmode from "./components/Darkmode";
-import { Footer } from "./components/Footer";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Info from "./components/Info.js";
-import Projects from "./components/Projects";
-import { Scroll } from "./components/Scroll";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import { Contact } from "./components/Contact";
+import AboutMe from "./components/AboutMe";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Darkmode />
-
-      <div className="wrapper">
-        <Header />
-
-        <Hero />
-
-        <Info />
-
-        <Skills />
-
-        <Projects />
-
-        <AboutMe />
-
-        <Contact />
-
-        <Footer />
-
-        <Scroll />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<AboutMe />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
