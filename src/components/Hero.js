@@ -1,9 +1,9 @@
 import React from "react";
-import resume from "../assets/milan resume.png";
+
 import removebg from "../assets/MILAN-removebg.jpg";
 const Hero = () => {
   return (
-    <section className="grid section1" id="home">
+    <section className="grid section1 " id="home">
       <div className="left">
         <img src={removebg} alt="" />
       </div>
@@ -13,10 +13,15 @@ const Hero = () => {
           <h2 className="name">Milan Sherpa</h2>
           <p className="tag">Web Developer</p>
         </div>
-
-        <a href={resume} download>
-          Download Resume <i className="fa-solid fa-download"></i>
-        </a>
+        <div className="forms">
+          <a href="milanresume.pdf" download="milanresume.pdf">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Download Resume <i className="fa-solid fa-download"></i>
+          </a>
+        </div>
       </div>
     </section>
   );

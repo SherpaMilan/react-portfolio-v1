@@ -10,12 +10,14 @@ const Projects = () => {
 
       <div className="projects-container grid">
         <div className="project-card flex">
-          <div className="top">
-            <img src={camera} alt="" />
-          </div>
+          <a href="https://mpa-money-tracker-app.vercel.app/">
+            <div className="top">
+              <img src={camera} alt="" />
+            </div>
+          </a>
           <div className="bottom">
-            <p>November 20, 2022</p>
-            <p>Flex Travel Blog</p>
+            <p>Expense Tracker App</p>
+            <p></p>
           </div>
         </div>
 

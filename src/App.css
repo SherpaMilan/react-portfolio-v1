@@ -1,6 +1,7 @@
 :root {
   --color-first: rgba(153, 205, 50, 0.647);
   --body-color: rgb(240, 240, 240);
+
   --font-PT: "PT Serif", serif;
   --font-Zilla: "Zilla Slab", serif;
   --link-color: #0aa7ef;
@@ -51,6 +52,7 @@ body {
 
 .wrapper {
   background: var(--body-color);
+  font-family: "PT Serif", serif;
 }
 
 a {
@@ -76,6 +78,12 @@ a {
   height: 100px;
   color: var(--text-color);
 }
+/* .primary-header hover {
+  background: #c1f079b3;
+  color: #0c0101;
+  border-radius: 5px;
+} */
+
 .primary-header .logo {
   position: relative;
   justify-content: center;
@@ -107,7 +115,7 @@ a {
   font-weight: bold;
 }
 .primary-header .right .primary-navigation li a:hover {
-  color: rgba(255, 115, 0, 0.9725490196);
+  color: rgba(9, 128, 39, 0.973);
 }
 @media (width <= 768px) {
   .primary-header .right .checkBtn {
@@ -181,9 +189,13 @@ section {
   align-items: center;
   padding-bottom: 1rem;
 }
-.section1 .left img {
-  width: 350px;
+
+.left img {
+  width: 500px;
+  margin-left: -10rem;
+  margin-bottom: -15px;
 }
+
 .section1 .right {
   grid-area: two;
   flex-direction: column;
@@ -210,16 +222,125 @@ section {
   border: 0;
   padding: 0.8rem 1.2rem;
   border-radius: 5px;
-  background: #000;
-  color: white;
+  background: var(--color-first);
+  /* color: rgb(14, 2, 2); */
   cursor: pointer;
   margin-top: 2rem;
 }
 .section1 .right a i {
   font-size: 1.5rem;
-  color: var(--color-first);
+  color: black;
 }
 
+/* new changes */
+
+.forms a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fafef9;
+  font-size: 16px;
+  text-decoration: none;
+
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.forms a:hover {
+  background: #c1f079b3;
+  color: #0c0101;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #b9f560, 0 0 25px #b9f560, 0 0 50px #b9f560,
+    0 0 100px #b9f560;
+}
+
+.forms a span {
+  position: absolute;
+  display: block;
+}
+
+.forms .right a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #018b0a);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.section1 .right a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #018b0a);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.section1 .right span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #018b0a);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.section1 .right a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #018b0a);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* upto here  */
 @media (width <= 768px) {
   .section1 {
     grid-template-areas: "one" "two";
@@ -234,6 +355,7 @@ section {
     width: 100%;
   }
 }
+
 .section2 {
   justify-content: center;
 }
