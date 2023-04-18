@@ -78,11 +78,6 @@ a {
   height: 100px;
   color: var(--text-color);
 }
-/* .primary-header hover {
-  background: #c1f079b3;
-  color: #0c0101;
-  border-radius: 5px;
-} */
 
 .primary-header .logo {
   position: relative;
@@ -192,7 +187,7 @@ section {
 
 .left img {
   width: 500px;
-  margin-left: -10rem;
+  margin-left: -2.5rem;
   margin-bottom: -15px;
 }
 

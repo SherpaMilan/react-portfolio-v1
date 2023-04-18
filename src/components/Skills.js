@@ -25,6 +25,11 @@ const Skills = () => {
         </div>
 
         <div className="flex">
+          <i class="fa-brands fa-bootstrap"></i>
+          <span>Bootstrap</span>
+        </div>
+
+        <div className="flex">
           <i className="fa-brands fa-sass"></i>
           <span>Sass</span>
         </div>

@@ -24,6 +24,7 @@ function App() {
         <Info />
 
         <Skills />
+        <njijnjini />
 
         <Projects />
 

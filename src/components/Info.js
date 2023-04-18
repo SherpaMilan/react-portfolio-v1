@@ -9,7 +9,7 @@ const Info = () => {
             <i className="fa-solid fa-award"></i>
           </div>
           <div>
-            <h5>InhtmlFormation Technology</h5>
+            <h5>Information Technology</h5>
             <p>Graduate</p>
           </div>
         </div>
