@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+// @mixin mobile() {
+//   @media screen and (max-width: 480px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet() {
+//   @media screen and (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin laptop() {
+//   @media screen and (max-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin extralargescreen() {
+//   @media screen and (min-width: 1200px) {
+//     @content;
+//   }
+// }
+
+>>>>>>> 24dae2055de2bd65eadd390ffc27b952917899de
 @mixin mobile() {
   @media (width <= 480px) {
     @content;
