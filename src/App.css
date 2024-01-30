@@ -1,5 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 :root {
-  --color-first: rgba(6, 163, 58, 0.647);
+  --color-first: rgba(38, 36, 36, 0.647);
+
+  --color-second: rgba(161, 225, 42, 0.647);
+  --color-third: rgba(49, 190, 211, 0.952);
   --body-color: rgb(240, 240, 240);
 
   --font-PT: "PT Serif", serif;
@@ -172,11 +179,12 @@ section {
   position: relative;
   padding: 0rem;
 }
+
 .section1::before {
   content: "Developer";
   position: absolute;
   right: 0;
-  top: -2.5rem;
+  top: -3.6rem;
   font-style: bold;
   font-size: 5rem;
   color: var(--color-first);
@@ -204,8 +212,9 @@ section {
 .section1 .right div .name {
   line-height: 4rem;
   font-size: 3.5rem;
-  color: white;
+  color: rgb(219, 224, 247);
   font-family: var(--font-PT);
+  /* font-family: "Acme", sans-serif; */
 }
 .section1 .right div .tag {
   color: whitesmoke;
@@ -221,29 +230,43 @@ section {
   border: 0;
   padding: 0.8rem 1.2rem;
   border-radius: 5px;
-  background: var(--color-first);
-  /* color: rgb(14, 2, 2); */
+  background: var(--color-third);
   cursor: pointer;
   margin-top: 2rem;
+  border-radius: 15px;
+  display: inline-block;
 }
 .section1 .right a i {
   font-size: 1.5rem;
   color: black;
 }
+.text-container {
+  color: #fbecec; /* White text for better contrast on a red background */
+  padding: 10px; /* Add padding to provide some space around the text */
+}
 
+.name {
+  font-size: 2em; /* Adjust the font size of the name */
+  margin-bottom: 10px; /* Add some space below the name */
+}
+
+.portfolio-text {
+  font-size: 1.2em; /* Adjust the font size of the paragraph */
+  line-height: 1.5; /* Set the line height for better readability */
+}
 /* new changes */
 
 .forms a {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding: 10px 20px;
-  color: #fafef9;
-  font-size: 16px;
+  color: #130e0f;
+  font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
-
   overflow: hidden;
   transition: 0.5s;
-  margin-top: 10px;
   letter-spacing: 2px;
 }
 
@@ -606,45 +629,51 @@ section {
 }
 
 footer {
-  background: rgba(35, 35, 35, 0.9411764706);
+  background: #232323f0;
   color: #fff;
-}
-footer .footer-container {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-footer .footer-container .footer-top {
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 4rem;
-  width: 80%;
-  text-align: center;
-}
-footer .footer-container .footer-top div ul {
-  margin-top: 1rem;
-  flex-direction: column;
-  gap: 0.5rem;
-  list-style: none;
-}
-footer .footer-container .footer-top div ul li:hover {
-  color: var(--color-first);
-  cursor: pointer;
-}
-footer .footer-container .footer-bottom {
-  flex-direction: column;
-  text-align: center;
-  gap: 2rem;
-  padding-bottom: 1rem;
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-top {
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 4rem;
+      width: 80%;
+      text-align: center;
+
+      div {
+        ul {
+          margin-top: 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
+          list-style: none;
+
+          li:hover {
+            color: var(--color-first);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
 }
 
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: var(--color-first);
-  width: 60px;
-  height: 60px;
+  background: var(--color-second);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   z-index: 999;
   cursor: pointer;

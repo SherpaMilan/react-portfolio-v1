@@ -9,7 +9,15 @@ const AboutMe = () => {
 
       <div className="about-container flex">
         <div className="left flex">
-          <div className="bg"></div>
+          <div
+            className="bg"
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/images/bgimage.jpg)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.9, // Adjust the opacity value as needed
+            }}
+          ></div>
           <img src={removebg} alt="profile-img" />
         </div>
 

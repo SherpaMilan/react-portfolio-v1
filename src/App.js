@@ -21,8 +21,6 @@ function App() {
 
         <Hero />
 
-        <Info />
-
         <Skills />
         <njijnjini />
 
