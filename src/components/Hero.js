@@ -11,14 +11,9 @@ const Hero = () => {
       <div className="right flex">
         <div>
           <h2 className="name">Milan Sherpa</h2>
-          <p className="tag">Web Developer</p>
         </div>
         <div className="forms">
           <a href="milanresume.pdf" download="milanresume.pdf">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
             Download Resume <i className="fa-solid fa-download"></i>
           </a>
         </div>

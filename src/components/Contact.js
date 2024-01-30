@@ -1,25 +1,41 @@
-import React from "react";
+import { getByTitle } from "@testing-library/react";
 
 export const Contact = () => {
+  const whatsappstyle = {
+    color: "#1ac8b9",
+  };
+  const twitterStyle = {
+    color: "#1ac8b9",
+  };
+  const metastyle = {
+    color: "#1ac8b9",
+  };
+  const lnstyle = {
+    color: "#1ac8b9",
+  };
+  const githubstyle = {
+    color: "#1ac8b9",
+  };
+
   return (
     <section className="section6 flex" id="contact">
       <h1 className="title">Get in touch</h1>
 
       <div className="social flex">
         <a href="https://www.linkedin.com/in/milan-sherpa-5a45b51b3/">
-          <i className="fa-brands fa-linkedin"></i>
+          <i class="bx bxl-linkedin-square" style={lnstyle}></i>
         </a>
         <a href=" https://github.com/SherpaMilan">
-          <i className="fa-brands fa-github"></i>
+          <i class="bx bxl-github" style={githubstyle}></i>
         </a>
         <a href="https://www.facebook.com/">
-          <i className="fa-brands fa-facebook"></i>
+          <i class="bx bxl-meta" style={metastyle}></i>
         </a>
         <a href="https://twitter.com/i/flow/login">
-          <i className="fa-brands fa-twitter"></i>
+          <i class="bx bxl-twitter" style={twitterStyle}></i>
         </a>
         <a href="https://www.whatsapp.com/">
-          <i className="fa-brands fa-whatsapp"></i>
+          <i class="bx bxl-whatsapp" style={whatsappstyle}></i>
         </a>
       </div>
       <h1>Or</h1>

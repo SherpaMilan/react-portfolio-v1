@@ -15,13 +15,14 @@ const AboutMe = () => {
 
         <div className="right flex">
           <h1>Milan Sherpa</h1>
-          <p>IT Graduate at Southern Cross University ,Sydney, NSW Australia</p>
-          <p>
+          <h3>
+            IT Graduate at Southern Cross University ,Sydney, NSW Australia
+          </h3>
+          <h4>
             Developing software skills, cultivating a skill mindset, and growing
             personally
-          </p>
+          </h4>
 
-          <a href=" ">Connect With Me</a>
           <div className="flex">
             <div className="tag">Interests</div>
 

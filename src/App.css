@@ -1,5 +1,5 @@
 :root {
-  --color-first: rgba(153, 205, 50, 0.647);
+  --color-first: rgba(6, 163, 58, 0.647);
   --body-color: rgb(240, 240, 240);
 
   --font-PT: "PT Serif", serif;
@@ -110,11 +110,11 @@ a {
   font-weight: bold;
 }
 .primary-header .right .primary-navigation li a:hover {
-  background: #c1f079b3;
+  background: #ecefe6b3;
   color: #0c0101;
   border-radius: 5px;
   box-shadow: 0 0 5px #b9f560, 0 0 25px #b9f560, 0 0 50px #b9f560,
-    0 0 100px #b9f560;
+    0 0 100px #ebf3df;
 }
 @media (width <= 768px) {
   .primary-header .right .checkBtn {
@@ -170,7 +170,7 @@ section {
   margin: 8rem auto 3rem auto;
   width: 90vw;
   position: relative;
-  padding: 0 3rem;
+  padding: 0rem;
 }
 .section1::before {
   content: "Developer";
@@ -205,7 +205,7 @@ section {
   line-height: 4rem;
   font-size: 3.5rem;
   color: white;
-  font-family: var(--font-Zilla);
+  font-family: var(--font-PT);
 }
 .section1 .right div .tag {
   color: whitesmoke;
@@ -476,7 +476,7 @@ section {
   font-size: 1.8rem;
 }
 .section5 .about-container {
-  padding: 3rem;
+  padding: 1rem;
 }
 .section5 .about-container .left {
   width: 50%;
@@ -487,7 +487,7 @@ section {
 .section5 .about-container .left .bg {
   position: absolute;
   width: 95%;
-  height: 25%;
+  height: 40%;
   background: var(--color-first);
   bottom: 0;
   z-index: 0;
@@ -495,6 +495,7 @@ section {
 .section5 .about-container .left img {
   width: 100%;
   z-index: 1;
+  margin-bottom: 1px;
 }
 .section5 .about-container .right {
   width: 50%;
