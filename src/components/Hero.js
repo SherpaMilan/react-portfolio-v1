@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className=" section1"
+        className="section1"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/images/bgimage.jpg)`,
           backgroundSize: "cover",
@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
           <div className="right flex">
             <div className="text-container">
-              <h2 className="name">Milan Sherpa</h2>
+              <p className="name">Uncover My Professional Footprint</p>
               <p className="portfolio-text">
                 I invite you to explore my professional portfolio, offering a
                 glimpse into my skills and achievements. Click below to download
@@ -37,6 +37,8 @@ const Hero = () => {
             </div>
 
             <div className="forms">
+              <span></span>
+              <span></span>
               <span></span>
               <span></span>
               <a href="milanresume.pdf" download="milanresume.pdf">

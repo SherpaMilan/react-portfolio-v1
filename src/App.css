@@ -167,14 +167,12 @@ a {
   gap: 1rem;
 }
 
-section {
-  padding: 4rem;
-}
-
 .section1 {
   background: var(--color-first);
   grid-template-areas: "one two";
-  margin: 8rem auto 3rem auto;
+  margin: 8rem auto 0.01rem auto;
+
+  background-size: cover;
   width: 90vw;
   position: relative;
   padding: 0rem;
@@ -246,8 +244,8 @@ section {
 }
 
 .name {
-  font-size: 2em; /* Adjust the font size of the name */
-  margin-bottom: 10px; /* Add some space below the name */
+  font-size: 0.2em; /* Adjust the font size of the name */
+  margin-bottom: 12px; /* Add some space below the name */
 }
 
 .portfolio-text {
@@ -366,7 +364,7 @@ section {
 @media (width <= 768px) {
   .section1 {
     grid-template-areas: "one" "two";
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
   .section1 .right {
     align-items: center;
