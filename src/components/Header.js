@@ -5,7 +5,7 @@ const Header = () => {
     <header className="flex primary-header">
       {/* <!-- left side --> */}
       <div className="flex logo">
-        <h2>Milan Sherpa</h2>
+        <h1>Milan Sherpa</h1>
 
         <div>
           <h2 className="line">Frontend Developer</h2>

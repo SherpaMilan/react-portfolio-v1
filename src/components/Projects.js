@@ -6,7 +6,7 @@ import camera2 from "../assets/camera2.jpg";
 const Projects = () => {
   return (
     <section className="section4 flex" id="projects">
-      <h1 className="title">My Projects</h1>
+      <h1 className="title">Projects</h1>
 
       <div className="projects-container grid">
         <div className="project-card flex">

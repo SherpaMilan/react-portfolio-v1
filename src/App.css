@@ -91,12 +91,13 @@ a {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  font-size: 30px;
 }
 .primary-header .logo .line::before {
   content: " ";
   background: rgba(255, 115, 0, 0.9725490196);
   height: 110%;
-  width: 1px;
+  width: 3px;
   position: absolute;
   top: 0;
   left: 42%;
@@ -376,73 +377,106 @@ a {
   }
 }
 
+/* Styling for the Skillset Evolution section */
 .section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 106px 0;
+}
+
+.title {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.skills-container {
+  position: relative;
+  display: flex;
   justify-content: center;
+  margin-top: 14px;
+  gap: 20px; /* Adjust the gap between items as needed */
+  width: 90%; /* Adjust the width as needed */
 }
-.section2 .info-container {
-  width: 80vw;
-  border: 1px solid var(--border-color);
-  border-radius: 50px;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  color: var(--text-color);
+
+.pole {
+  width: 10px;
+  height: 150px; /* Adjust the height as needed */
+  border-radius: 25%;
+  margin-right: 40px;
 }
-.section2 .info-container .info-lists .info-container i {
-  font-size: 2.5rem;
-  color: var(--color-first);
+
+.circle {
+  position: absolute;
+  width: 26px;
+  height: 10px; /* Adjust the height as needed */
+
+  border-radius: 50%;
+  margin-top: 140px;
+  margin-right: 40px; /* Adjust the margin-left based on the half of the width */
 }
-.section2 .info-container .info-lists div h5 {
-  letter-spacing: 2px;
+
+.flag {
+  position: absolute;
+  width: 141px; /* Adjust the width of the flag */
+  height: 65px; /* Adjust the height of the flag */
+
+  margin-top: 14px; /* Curved bottom corners */
+  margin-left: 90px;
 }
-.section2 .info-container .info-lists div p {
-  color: #cb9a08;
+
+.flag-content {
+  color: rgb(245, 242, 242);
+  margin-left: 3px;
 }
-.section2 .info-container .info-divider {
-  background: grey;
-  width: 2px;
-  height: 35px;
+
+.flag-year {
+  font-weight: bold;
 }
-@media (width <= 768px) {
-  .section2 .info-container {
-    width: 100%;
-    font-size: 1.5rem;
-    padding: 1rem;
-    border-radius: 10px;
+@media (max-width: 480px) {
+  .section2 .skills-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center items on smaller screens */
+    width: 100vw;
+    padding: 3rem 0.5rem;
   }
-  .section2 .info-divider {
-    display: none;
+
+  .section2 .skills-container .flag {
+    margin-top: -50px; /* Adjust the margin-top for the flag */
   }
 }
 
+/* section 3  */
 .section3 {
   justify-content: center;
   align-items: center;
+  margin-bottom: 120px;
 }
+
 .section3 .skills-container {
   gap: 5rem;
 }
+
 .section3 .skills-container div {
   flex-direction: column;
   align-items: center;
 }
+
 .section3 .skills-container div i {
   font-size: 4rem;
-  color: rgba(128, 0, 128, 0.8);
+  color: rgba(0, 100, 128, 0.8);
 }
+
 .section3 .skills-container div span {
   color: var(--text-color);
 }
-@media (width <= 768px) {
+
+@media (max-width: 768px) {
   .section3 .skills-container {
     gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
-  }
-}
-@media (width <= 768px) {
-  .section3 .skills-container {
     font-size: 2rem;
   }
 }

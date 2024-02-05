@@ -6,7 +6,7 @@ import Darkmode from "./components/Darkmode";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Info from "./components/Info.js";
+
 import Projects from "./components/Projects";
 import { Scroll } from "./components/Scroll";
 import Skills from "./components/Skills";
@@ -22,7 +22,6 @@ function App() {
         <Hero />
 
         <Skills />
-        <njijnjini />
 
         <Projects />
 
