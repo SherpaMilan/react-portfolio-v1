@@ -172,7 +172,6 @@ a {
   background: var(--color-first);
   grid-template-areas: "one two";
   margin: 8rem auto 0.01rem auto;
-
   background-size: cover;
   width: 90vw;
   position: relative;
@@ -213,7 +212,6 @@ a {
   font-size: 3.5rem;
   color: rgb(219, 224, 247);
   font-family: var(--font-PT);
-  /* font-family: "Acme", sans-serif; */
 }
 .section1 .right div .tag {
   color: whitesmoke;
@@ -377,51 +375,90 @@ a {
   }
 }
 
-/* Styling for the Skillset Evolution section */
-
 /* section 3  */
 
-.section3 .title {
-  margin-top: 10px;
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 106px 0;
-
-  line-height: 4rem;
-  font-size: 2rem;
-  color: rgb(8, 9, 10);
-  font-family: var(--font-PT);
+.section2 {
+  margin: 7rem auto 0;
+  width: 90vw;
+  position: relative;
+  padding: 150px;
+}
+.section2::before {
+  content: "SkillsSet";
+  position: absolute;
+  right: 0;
+  top: -2.8rem;
+  font-style: bold;
+  font-size: 5rem;
+  color: var(--color-first);
 }
 
 .skills-container {
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto); /* 3 columns */
+  grid-template-rows: repeat(3, auto); /* 2 rows */
+  grid-gap: 2px;
+}
+
+/* CSS for circle containers */
+.circle {
+  width: 100px; /* Set the width and height to make a circle */
+  height: 100px;
+  display: flex; /* Use flexbox to center the icon vertically and horizontally */
   justify-content: center;
-  margin-top: 14px;
-  gap: 20px; /* Adjust the gap between items as needed */
-  width: 90%; /* Adjust the width as needed */
+  align-items: center;
+  margin: 2px; /* Add margin for spacing */
+  border-radius: 50%; /* Use border-radius to create a circle */
+}
+.circle-container1 {
+  border: 8px solid #178394; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #490675;
+  grid-column: 2;
+  grid-row: 2;
+  height: 102px;
+  width: 102px;
+}
+.circle-container2 {
+  border: 8px solid #179447; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #d38181;
+  grid-column: 2; /* second column */
+  grid-row: 4; /* first row */
+}
+/* //react container  */
+.circle-container3 {
+  border: 8px solid #61d7be; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #3d5f05;
+
+  grid-column: 2; /* third column */
+  grid-row: 3; /* first row */
 }
 
-.section3 .skills-container {
-  gap: 5rem;
+.circle-container4 {
+  border: 6px solid #b99814; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #854d4d;
+  grid-column: 4; /* first column */
+  grid-row: 4; /* second row */
+}
+.circle-container5 {
+  border: 8px solid #5b9772; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #bc8484;
+  grid-column: 4; /* second column */
+  grid-row: 2; /* second row */
+}
+.circle-container6 {
+  border: 6px solid #937db6; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #630707;
+  grid-column: 4; /* third column */
+  grid-row: 3; /* second row */
 }
 
-.section3 .skills-container div {
-  flex-direction: column;
-}
-.section3 .skills-container div i {
+.section2 .skills-container div i {
   font-size: 4rem;
   color: rgba(0, 100, 128, 0.8);
 }
 
-.section3 .skills-container div span {
-  color: var(--text-color);
-}
-
 @media (max-width: 768px) {
-  .section3 .skills-container {
+  .section2 .skills-container {
     gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -429,6 +466,7 @@ a {
   }
 }
 
+/* projects  */
 .section4 {
   flex-direction: column;
   justify-content: center;

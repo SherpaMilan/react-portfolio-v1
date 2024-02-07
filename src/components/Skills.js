@@ -2,43 +2,45 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <section className="section3 " id="skills">
-      <h1 className="title">Skillset Evolution</h1>
-      <div className="skills-container flex">
-        <div className="flex">
-          <i className="fa-brands fa-html5"></i>
-          <span>HTML</span>
-        </div>
-        <div className="flex">
-          <i className="fa-brands fa-css3"></i>
-          <span>CSS</span>
-        </div>
-        <div className="flex">
-          <i className="fa-brands fa-react"></i>
-          <span>React</span>
-        </div>
-        <div className="flex">
-          <i className="fa-brands fa-js"></i>
-          <span>JavaScript</span>
-        </div>
-        <div className="flex">
-          <i class="fa-brands fa-bootstrap"></i>
-          <span>Bootstrap</span>
-        </div>
-        <div className="flex">
-          <i className="fa-brands fa-sass"></i>
-          <span>Sass</span>
-        </div>
-        <div className="flex">
-          <i class="bx bxl-firebase"></i>
-          <span>Firebase</span>
-        </div>
-        <div className="flex">
-          <i class="bx bxl-tailwind-css"></i>
-          <span>TailwindCss</span>
-        </div>
+    <>
+      <div
+        className="section2"
+        id="skills"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/section33.jpg)`,
+          backgroundSize: "40%",
+          backgroundPosition: "center",
+          opacity: 0.9, // Adjust the opacity value as needed
+        }}
+      >
+        <section>
+          <div className="skills-container flex">
+            <div className="flex circle circle-container1">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+
+            <div className="flex circle  circle-container2">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+
+            <div className="flex circle circle-container3">
+              <i class="fa-brands fa-react"></i>
+            </div>
+
+            <div className="flex circle circle-container4">
+              <i class="fa-brands fa-bootstrap"></i>
+            </div>
+
+            <div className="flex circle  circle-container5">
+              <i class="bx bxl-tailwind-css" style={{ color: "#3c13b1" }}></i>
+            </div>
+            <div className="flex circle circle-container6">
+              <i class="bx bxl-firebase" style={{ color: "#dd9a09" }}></i>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 
