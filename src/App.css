@@ -378,17 +378,21 @@ a {
 }
 
 /* Styling for the Skillset Evolution section */
-.section2 {
+
+/* section 3  */
+
+.section3 .title {
+  margin-top: 10px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 106px 0;
-}
 
-.title {
-  font-size: 2em;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  line-height: 4rem;
+  font-size: 2rem;
+  color: rgb(8, 9, 10);
+  font-family: var(--font-PT);
 }
 
 .skills-container {
@@ -400,69 +404,13 @@ a {
   width: 90%; /* Adjust the width as needed */
 }
 
-.pole {
-  width: 10px;
-  height: 150px; /* Adjust the height as needed */
-  border-radius: 25%;
-  margin-right: 40px;
-}
-
-.circle {
-  position: absolute;
-  width: 26px;
-  height: 10px; /* Adjust the height as needed */
-
-  border-radius: 50%;
-  margin-top: 140px;
-  margin-right: 40px; /* Adjust the margin-left based on the half of the width */
-}
-
-.flag {
-  position: absolute;
-  width: 141px; /* Adjust the width of the flag */
-  height: 65px; /* Adjust the height of the flag */
-
-  margin-top: 14px; /* Curved bottom corners */
-  margin-left: 90px;
-}
-
-.flag-content {
-  color: rgb(245, 242, 242);
-  margin-left: 3px;
-}
-
-.flag-year {
-  font-weight: bold;
-}
-@media (max-width: 480px) {
-  .section2 .skills-container {
-    flex-direction: column;
-    align-items: center; /* Center items on smaller screens */
-    width: 100vw;
-    padding: 3rem 0.5rem;
-  }
-
-  .section2 .skills-container .flag {
-    margin-top: -50px; /* Adjust the margin-top for the flag */
-  }
-}
-
-/* section 3  */
-.section3 {
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 120px;
-}
-
 .section3 .skills-container {
   gap: 5rem;
 }
 
 .section3 .skills-container div {
   flex-direction: column;
-  align-items: center;
 }
-
 .section3 .skills-container div i {
   font-size: 4rem;
   color: rgba(0, 100, 128, 0.8);
@@ -477,7 +425,7 @@ a {
     gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -744,4 +692,6 @@ footer {
   100% {
     top: 40%;
   }
-} /*# sourceMappingURL=portfolio.css.map */
+}
+
+/* //practise css  below*/
