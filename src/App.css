@@ -510,15 +510,48 @@ a {
   color: rgba(0, 100, 128, 0.8);
 }
 
-@media (max-width: 768px) {
-  .section2 .skills-container {
-    gap: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 1rem;
-  }
+.loading-container {
+  display: flex;
+  position: absolute; /* Position the loading container absolutely */
+  top: 0; /* Align it to the top of its containing element */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Set a higher z-index to ensure it appears on top */
 }
 
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 220px; /* Adjust top margin to create space for the loading container */
+  order: 1; /* Set skills container to appear below loading container */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .loading-container {
+    flex-direction: column;
+  }
+  .skills-container {
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  .loading-container {
+    margin-top: -670px; /* Adjust margin for spacing */
+    margin-left: 190px;
+  }
+  .ring {
+    font-size: 2px;
+  }
+
+  .skills-container {
+    margin-top: 100px;
+  }
+}
 /* projects  */
 .section4 {
   flex-direction: column;
