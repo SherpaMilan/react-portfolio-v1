@@ -15,12 +15,14 @@
   --text-color: #000;
   --color-dark: #2a2a2a;
   --border-color: #2a2a;
+
   --darkmode-color: var(--color-dark);
   --dark-text-color: #fff;
   --dark-link-color: var(--color-first);
   --dark-border-color: #fff;
 }
 
+/* Dark mode toggle */
 .dark-mode-checkbox:checked ~ .wrapper {
   --body-color: var(--darkmode-color);
   --text-color: var(--dark-text-color);
@@ -185,7 +187,11 @@ a {
   top: -3.6rem;
   font-style: bold;
   font-size: 5rem;
-  color: var(--color-first);
+}
+
+.dark-mode-checkbox:checked + label i {
+  /* Styles for the moon icon when dark mode is active */
+  color: var(--dark-text-color);
 }
 .section1 .left {
   grid-area: one;
@@ -438,7 +444,8 @@ a {
 }
 
 .loading-text {
-  color: black;
+  color: rgb(3, 122, 30);
+  font-weight: bold;
 }
 
 .section2 {
@@ -454,7 +461,6 @@ a {
   top: -2.8rem;
   font-style: bold;
   font-size: 4rem;
-  color: var(--color-first);
 }
 
 .skills-container {

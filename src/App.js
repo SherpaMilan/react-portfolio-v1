@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe";
+// import Certifications from "./components/Certifications";
 import { Contact } from "./components/Contact";
 import Darkmode from "./components/Darkmode";
 // import Example from "./components/Example";
@@ -21,6 +22,7 @@ function App() {
         <Hero />
 
         <Skills />
+        {/* <Certifications /> */}
 
         <Projects />
 
