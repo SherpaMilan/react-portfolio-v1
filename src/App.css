@@ -375,29 +375,93 @@ a {
   }
 }
 
-/* section 3  */
+/* section 2  */
+
+.loading-container {
+  display: flex;
+  position: absolute; /* Position the loading container absolutely */
+  top: 0; /* Align it to the top of its containing element */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Set a higher z-index to ensure it appears on top */
+}
+
+.ring {
+  width: 200px;
+  height: 200px;
+  border: 0px solid black; /* Make sure to adjust border-width to your preference */
+  border-radius: 50%;
+  position: absolute;
+}
+.ring:nth-child(1) {
+  border-bottom-width: 8px;
+  border-color: #ef0a9b;
+  animation: rotate1 2s linear infinite;
+}
+.ring:nth-child(2) {
+  border-right-width: 8px;
+  border-color: #0aef3f;
+  animation: rotate2 2s linear infinite;
+}
+
+.ring:nth-child(3) {
+  border-top-width: 8px;
+  border-color: #0f8ac7;
+  animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+.loading-text {
+  color: black;
+}
 
 .section2 {
-  margin: 7rem auto 0;
+  margin: 6rem auto 0;
   width: 90vw;
   position: relative;
-  padding: 150px;
+  padding: 1px;
 }
-.section2::before {
+.skills-container:before {
   content: "SkillsSet";
   position: absolute;
   right: 0;
   top: -2.8rem;
   font-style: bold;
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--color-first);
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(4, auto); /* 3 columns */
-  grid-template-rows: repeat(3, auto); /* 2 rows */
-  grid-gap: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 290px;
 }
 
 /* CSS for circle containers */
@@ -407,49 +471,38 @@ a {
   display: flex; /* Use flexbox to center the icon vertically and horizontally */
   justify-content: center;
   align-items: center;
-  margin: 2px; /* Add margin for spacing */
+  margin: 10px; /* Add margin for spacing */
   border-radius: 50%; /* Use border-radius to create a circle */
 }
+/* html  */
 .circle-container1 {
   border: 8px solid #178394; /* Set border with desired color */
   box-shadow: 0 0 0 4px #490675;
-  grid-column: 2;
-  grid-row: 2;
-  height: 102px;
-  width: 102px;
 }
+/* css  */
 .circle-container2 {
   border: 8px solid #179447; /* Set border with desired color */
   box-shadow: 0 0 0 4px #d38181;
-  grid-column: 2; /* second column */
-  grid-row: 4; /* first row */
 }
 /* //react container  */
 .circle-container3 {
   border: 8px solid #61d7be; /* Set border with desired color */
   box-shadow: 0 0 0 4px #3d5f05;
-
-  grid-column: 2; /* third column */
-  grid-row: 3; /* first row */
 }
-
+/* js  */
 .circle-container4 {
   border: 6px solid #b99814; /* Set border with desired color */
   box-shadow: 0 0 0 4px #854d4d;
-  grid-column: 4; /* first column */
-  grid-row: 4; /* second row */
 }
+/* tailwind  */
 .circle-container5 {
   border: 8px solid #5b9772; /* Set border with desired color */
   box-shadow: 0 0 0 4px #bc8484;
-  grid-column: 4; /* second column */
-  grid-row: 2; /* second row */
 }
+/* firebase  */
 .circle-container6 {
   border: 6px solid #937db6; /* Set border with desired color */
   box-shadow: 0 0 0 4px #630707;
-  grid-column: 4; /* third column */
-  grid-row: 3; /* second row */
 }
 
 .section2 .skills-container div i {

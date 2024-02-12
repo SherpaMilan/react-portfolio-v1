@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe";
 import { Contact } from "./components/Contact";
 import Darkmode from "./components/Darkmode";
+// import Example from "./components/Example";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -30,6 +31,7 @@ function App() {
         <Footer />
 
         <Scroll />
+        {/* <Example /> */}
       </div>
     </div>
   );
