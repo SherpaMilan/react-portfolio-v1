@@ -187,6 +187,7 @@ a {
   top: -2.5rem;
   font-style: bold;
   font-size: 3rem;
+  color: #a0a540;
 }
 
 .dark-mode-checkbox:checked + label i {
@@ -406,6 +407,7 @@ a {
   border-color: #0f8ac7;
   animation: rotate3 2s linear infinite;
 }
+
 @keyframes rotate1 {
   0% {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -439,6 +441,7 @@ a {
 }
 .loading-text {
   font-weight: bold;
+  color: #a0a540;
 }
 
 .section2 {
@@ -456,6 +459,7 @@ a {
   top: -1.8rem;
   font-style: bold;
   font-size: 3rem;
+  color: #a0a540;
 }
 
 .skills-container {
@@ -563,6 +567,7 @@ a {
   top: -2rem;
   font-style: bold;
   font-size: 3rem;
+  color: #a0a540;
 }
 
 .ag-courses_item {
@@ -613,7 +618,7 @@ a {
 .ag-courses-item_title {
   height: 65px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17.5px;
   color: #c5ce21;
   overflow: hidden; /* Hide any overflow text */
   text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
@@ -622,7 +627,7 @@ a {
   position: relative;
 }
 .ag-courses-item_details {
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
   z-index: 2;
   position: relative;
@@ -656,15 +661,18 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  padding-bottom: 70px;
 }
+
 .section4 .title {
-  font-size: 2rem;
-  color: var(--text-color);
+  font-size: 3rem;
+  color: #a0a540;
 }
 .section4 .projects-container {
-  width: 100%;
-  padding: 3rem 2rem 0 2rem;
+  width: 90vw;
+
+  padding: 3.5rem 2rem 0 2rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 .section4 .projects-container .project-card {
@@ -674,14 +682,16 @@ a {
 .section4 img {
   width: 100%;
   height: 250px;
+  border-radius: 12px;
 }
-.section4 .projects-container .project-card .bottom {
-  padding: 1rem;
+
+.section4 .projects-container .project-card .botton p {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
-.section4 .projects-container .project-card .bottom p {
-  font-size: 1.3rem;
-}
-.section4 .projects-container .project-card .bottom p:nth-child(2) {
+.section4 .projects-container .project-card .botton p:nth-child(2) {
   margin-top: 1.2rem;
   font-weight: bold;
 }
@@ -699,7 +709,8 @@ a {
   color: var(--text-color);
 }
 .section5 .title {
-  font-size: 1.8rem;
+  font-size: 3rem;
+  color: #a0a540;
 }
 .section5 .about-container {
   padding: 1rem;
@@ -832,8 +843,7 @@ a {
 }
 
 footer {
-  background: #232323f0;
-  color: #fff;
+  color: black;
 
   .footer-container {
     flex-direction: column;
@@ -847,15 +857,28 @@ footer {
       width: 80%;
       text-align: center;
 
+      .sitemap {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .location {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .ophours {
+        font-size: 16px;
+        font-weight: bold;
+      }
       div {
         ul {
           margin-top: 1rem;
           flex-direction: column;
           gap: 0.5rem;
           list-style: none;
+          font-size: 13px;
 
           li:hover {
-            color: var(--color-first);
+            color: var(--border-color);
             cursor: pointer;
           }
         }
@@ -867,6 +890,37 @@ footer {
       gap: 2rem;
       padding-bottom: 1rem;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sitemap,
+  .location,
+  .ophours {
+    text-align: center;
+    margin: 0 auto; /* Center the div */
+    max-width: 80%; /* Limit the width for better readability */
+  }
+  .text-xl {
+    font-size: 1.2rem;
+  }
+  .font-bold {
+    font-weight: bold;
+  }
+  .mb-3 {
+    margin-bottom: 0.5rem;
+  }
+  .mb-6 {
+    margin-bottom: 1rem;
   }
 }
 
