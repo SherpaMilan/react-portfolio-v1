@@ -20,7 +20,10 @@ export const Contact = () => {
   return (
     <section className="section6 flex" id="contact">
       <h1 className="title">Get in touch</h1>
-
+      <h2>
+        Join me as I continue to carve my path in the ever-evolving world of
+        technology.
+      </h2>
       <div className="social flex">
         <a href="https://www.linkedin.com/in/milan-sherpa-5a45b51b3/">
           <i class="bx bxl-linkedin-square" style={lnstyle}></i>
@@ -42,7 +45,7 @@ export const Contact = () => {
       <div className="email-section flex">
         <p>Contact me over email</p>
         <div className="email">
-          <a href="mailto:123@gmail.com">msherpa393@gmail.com</a>
+          <a href="mailto:msherpa393@gmail.com">msherpa393@gmail.com</a>
           <div className="send">
             <i className="fa-regular fa-paper-plane"></i>
           </div>

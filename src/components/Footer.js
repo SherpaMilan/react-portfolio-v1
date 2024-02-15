@@ -18,7 +18,7 @@ export const Footer = () => {
   };
   return (
     <footer>
-      <div className="footer-container flex">
+      <div className="footer-container   flex">
         <div className="footer-top flex">
           <div className="sitemap">
             <h1 className="text-xl  font-bold mb-3">
@@ -62,7 +62,7 @@ export const Footer = () => {
               <li className="text-black">Zip Code: 45678</li>
             </ul>
           </div>
-
+          {/* opening hours */}
           <div className="mb-6  md:mb-0 ophours">
             <h3 className="text-xl  font-bold mb-3">
               Opening Hours
@@ -82,7 +82,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="text-black-800 flex justify-center font-semibold text-l">
+        <div className=" justify-center font-semibold text-l">
           <p>
             {" "}
             &copy; {new Date().getFullYear()} Milan Sherpa| All Rights Reserved.

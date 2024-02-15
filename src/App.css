@@ -482,7 +482,7 @@ a {
 /* html  */
 .circle-container1 {
   border: 8px solid #178394; /* Set border with desired color */
-  box-shadow: 0 0 0 4px #490675;
+  box-shadow: 0 0 0 4px #2f5b8e;
 }
 /* css  */
 .circle-container2 {
@@ -497,7 +497,7 @@ a {
 /* js  */
 .circle-container4 {
   border: 6px solid #b99814; /* Set border with desired color */
-  box-shadow: 0 0 0 4px #854d4d;
+  box-shadow: 0 0 0 4px #af6b6b;
 }
 /* tailwind  */
 .circle-container5 {
@@ -506,8 +506,8 @@ a {
 }
 /* firebase  */
 .circle-container6 {
-  border: 6px solid #937db6; /* Set border with desired color */
-  box-shadow: 0 0 0 4px #630707;
+  border: 6px solid #8565b9; /* Set border with desired color */
+  box-shadow: 0 0 0 4px #8f498d;
 }
 
 .section2 .skills-container div i {
@@ -702,74 +702,81 @@ a {
   }
 }
 
+/* about me  */
 .section5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--text-color);
+
+  .heading {
+    font-size: 2.5rem;
+    color: #a0a540;
+  }
+
+  .about-container {
+    padding: 5rem;
+
+    .left {
+      width: 50%;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .gradimage {
+      position: relative;
+    }
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1b5a91;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .skills-color {
+      color: #a0a540;
+    }
+    .right {
+      width: 50%;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    h3 {
+      font-weight: 500;
+      font-style: normal;
+      font-family: "Protest Riot", sans-serif;
+    }
+    h4 {
+      color: #6b0fc7;
+      background-color: #88c76b; /* Yellow background color */
+      padding: 5px; /* Add some padding for better readability */
+      border-radius: 20px; /* Optional: Add rounded corners */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+    a {
+      color: var(--link-color);
+      font-size: 1.4rem;
+    }
+    .right > div {
+      flex-direction: column;
+    }
+    .right > div div {
+      display: flex;
+      gap: 1rem;
+    }
+    .right > div div span {
+      padding: 0.5rem 0.7rem;
+    }
+    .right > div div span:hover {
+      cursor: pointer;
+      background: rgb(182, 202, 50);
+      border-radius: 0.8rem;
+    }
+  }
 }
-.section5 .title {
-  font-size: 3rem;
-  color: #a0a540;
-}
-.section5 .about-container {
-  padding: 1rem;
-}
-.section5 .about-container .left {
-  width: 50%;
-  justify-content: center;
-  padding: 0 2rem;
-  position: relative;
-}
-.section5 .about-container .left .bg {
-  position: absolute;
-  width: 95%;
-  height: 40%;
-  background: var(--color-first);
-  bottom: 0;
-  z-index: 0;
-}
-.section5 .about-container .left img {
-  width: 100%;
-  z-index: 1;
-  margin-bottom: 1px;
-}
-.section5 .about-container .right {
-  width: 50%;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 0 2rem;
-}
-.section5 .about-container .right h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.section5 .about-container .right p:nth-child(3) {
-  font-weight: bold;
-}
-.section5 .about-container .right a {
-  color: var(--link-color);
-  font-size: 1.4rem;
-}
-.section5 .about-container .right > div {
-  flex-direction: column;
-}
-.section5 .about-container .right > div .tag {
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-.section5 .about-container .right > div div {
-  display: flex;
-  gap: 3rem;
-}
-.section5 .about-container .right > div div span {
-  padding: 0.5rem 0.7rem;
-}
-.section5 .about-container .right > div div span:hover {
-  cursor: pointer;
-  background: rgb(182, 202, 50);
-  border-radius: 0.8rem;
-}
+
 @media (width <= 1024px) {
   .section5 .about-container {
     flex-direction: column;
@@ -792,58 +799,66 @@ a {
   }
   .section5 .about-container .right div {
     width: 80%;
+    justify-content: center;
     margin: 0 auto;
   }
 }
 
+/* contact  */
 .section6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--text-color);
+  .title {
+    font-size: 2rem;
+    margin-top: 103px;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .social {
+    padding: 2rem 0;
+    gap: 5rem;
+  }
+  .social i {
+    font-size: 3rem;
+  }
+  .social i:nth-child(5) {
+    color: #0e76a8;
+  }
+  .email-section {
+    margin-top: 0.1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .email {
+      background: var(--border-color);
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      gap: 1rem;
+      cursor: pointer;
+    }
+    .email a {
+      color: rgb(104, 6, 6);
+    }
+    .email .send {
+      color: var(--body-color);
+    }
+  }
 }
-.section6 .title {
-  font-size: 2rem;
-}
-.section6 .social {
-  padding: 4rem 0;
-  gap: 5rem;
-}
-.section6 .social i {
-  font-size: 2.5rem;
-}
-.section6 .social i:nth-child(5) {
-  color: #0e76a8;
-}
-.section6 .email-section {
-  margin-top: 2rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-.section6 .email-section .email {
-  background: var(--border-color);
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-radius: 100px;
-  gap: 1rem;
-  cursor: pointer;
-}
-.section6 .email-section .email a {
-  color: rgb(104, 6, 6);
-}
-.section6 .email-section .email .send {
-  color: var(--body-color);
-}
+
 @media (width <= 480px) {
   .section6 .social {
     gap: 3rem;
   }
 }
 
+/* footer section  */
 footer {
-  color: #0a713c;
+  color: #a0a540;
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -933,15 +948,15 @@ footer {
   border-radius: 50%;
   z-index: 999;
   cursor: pointer;
-}
-.scroll-to-top .scroll-btn {
-  font-size: 1.5rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-animation: arrow infinite 2s ease;
-  animation: arrow infinite 2s ease;
+  .scroll-btn {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: arrow infinite 2s ease;
+    animation: arrow infinite 2s ease;
+  }
 }
 
 @-webkit-keyframes arrow {
