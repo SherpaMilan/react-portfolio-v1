@@ -57,6 +57,7 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5rem;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -86,47 +87,50 @@ a {
   top: 0;
   height: 100px;
   color: var(--text-color);
+
+  .logo {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 30px;
+
+    .line::before {
+      content: " ";
+      background: rgba(255, 115, 0, 0.9725490196);
+      height: 110%;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      left: 42%;
+    }
+  }
+  .right #check,
+  .right .checkBtn {
+    display: none;
+  }
+
+  .right .checkBtn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    float: right;
+    padding-right: 2.5rem;
+  }
+  .right .primary-navigation {
+    list-style: none;
+    gap: 2.5rem;
+    font-weight: bold;
+  }
+  .right .primary-navigation li a:hover {
+    background: #ecefe6b3;
+    color: #0c0101;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #b9f560, 0 0 25px #b9f560, 0 0 50px #b9f560,
+      0 0 100px #ebf3df;
+  }
 }
 
-.primary-header .logo {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  font-size: 30px;
-}
-.primary-header .logo .line::before {
-  content: " ";
-  background: rgba(255, 115, 0, 0.9725490196);
-  height: 110%;
-  width: 3px;
-  position: absolute;
-  top: 0;
-  left: 42%;
-}
-.primary-header .right #check,
-.primary-header .right .checkBtn {
-  display: none;
-}
-.primary-header .right .checkBtn {
-  cursor: pointer;
-  font-size: 1.5rem;
-  float: right;
-  padding-right: 2.5rem;
-}
-.primary-header .right .primary-navigation {
-  list-style: none;
-  gap: 2.5rem;
-  font-weight: bold;
-}
-.primary-header .right .primary-navigation li a:hover {
-  background: #ecefe6b3;
-  color: #0c0101;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #b9f560, 0 0 25px #b9f560, 0 0 50px #b9f560,
-    0 0 100px #ebf3df;
-}
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .primary-header .right .checkBtn {
     display: block;
   }
@@ -153,7 +157,7 @@ a {
     transition: 0.5s ease;
   }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .primary-header .logo h1 {
     font-size: 1.1rem;
   }
@@ -178,72 +182,72 @@ a {
   width: 90vw;
   position: relative;
   padding: 0rem;
-}
 
-.section1::before {
-  content: "Developer";
-  position: absolute;
-  right: 0;
-  top: -2.5rem;
-  font-style: bold;
-  font-size: 3rem;
-  color: #a0a540;
+  .section1::before {
+    content: "Developer";
+    position: absolute;
+    right: 0;
+    top: -2.5rem;
+    font-style: bold;
+    font-size: 3rem;
+    color: #a0a540;
+  }
+  .left {
+    grid-area: one;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    img {
+      width: 500px;
+      margin-left: -2.5rem;
+      margin-bottom: -15px;
+    }
+  }
+
+  .right {
+    grid-area: two;
+    flex-direction: column;
+    gap: 0.9rem;
+    justify-content: center;
+  }
+  .right div .name {
+    line-height: 4rem;
+    font-size: 3.5rem;
+    color: rgb(219, 224, 247);
+    font-family: var(--font-PT);
+  }
+  .right div .tag {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: var(--font-PT);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .right a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border: 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    background: var(--color-third);
+    cursor: pointer;
+    margin-top: 2rem;
+    border-radius: 15px;
+    display: inline-block;
+  }
+  .right a i {
+    font-size: 1.5rem;
+    color: black;
+  }
 }
 
 .dark-mode-checkbox:checked + label i {
   /* Styles for the moon icon when dark mode is active */
   color: var(--dark-text-color);
 }
-.section1 .left {
-  grid-area: one;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
-}
 
-.left img {
-  width: 500px;
-  margin-left: -2.5rem;
-  margin-bottom: -15px;
-}
-
-.section1 .right {
-  grid-area: two;
-  flex-direction: column;
-  gap: 0.9rem;
-  justify-content: center;
-}
-.section1 .right div .name {
-  line-height: 4rem;
-  font-size: 3.5rem;
-  color: rgb(219, 224, 247);
-  font-family: var(--font-PT);
-}
-.section1 .right div .tag {
-  color: whitesmoke;
-  font-size: 2rem;
-  font-family: var(--font-PT);
-  font-weight: bold;
-  margin-top: 1rem;
-}
-.section1 .right a {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border: 0;
-  padding: 0.8rem 1.2rem;
-  border-radius: 5px;
-  background: var(--color-third);
-  cursor: pointer;
-  margin-top: 2rem;
-  border-radius: 15px;
-  display: inline-block;
-}
-.section1 .right a i {
-  font-size: 1.5rem;
-  color: black;
-}
 .text-container {
   color: #fbecec; /* White text for better contrast on a red background */
   padding: 10px; /* Add padding to provide some space around the text */
@@ -367,7 +371,7 @@ a {
 }
 
 /* upto here  */
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .section1 {
     grid-template-areas: "one" "two";
     padding-bottom: 0rem;
@@ -376,7 +380,7 @@ a {
     align-items: center;
   }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .section1 .left img {
     width: 100%;
   }
@@ -536,7 +540,7 @@ a {
 
   .loading-container {
     margin-top: -10px; /* Adjust margin for spacing */
-    margin-left: 190px;
+    margin-left: 160px;
   }
   .ring {
     font-size: 2px;
@@ -544,6 +548,16 @@ a {
 
   .skills-container {
     margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* Styles for iPhone 4 */
+  .section2 .loading-container {
+    margin-top: -10px; /* Adjust margin for spacing */
+    margin-left: 100px;
+  }
+  .ring {
+    font-size: 1px;
   }
 }
 
@@ -655,6 +669,11 @@ a {
     margin-top: 450px;
   }
 }
+@media (max-width: 375px) {
+  .section3 {
+    margin-top: 790px;
+  }
+}
 
 /* projects  */
 .section4 {
@@ -663,39 +682,40 @@ a {
   align-items: center;
   gap: 3rem;
   padding-bottom: 70px;
+
+  .title {
+    font-size: 3rem;
+    color: #a0a540;
+  }
+  .projects-container {
+    width: 90vw;
+
+    padding: 3.5rem 2rem 0 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .projects-container .project-card {
+    flex-direction: column;
+    color: var(--text-color);
+  }
+  img {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+  }
+
+  .projects-container .project-card .botton p {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+  .projects-container .project-card .botton p:nth-child(2) {
+    margin-top: 1.2rem;
+    font-weight: bold;
+  }
 }
 
-.section4 .title {
-  font-size: 3rem;
-  color: #a0a540;
-}
-.section4 .projects-container {
-  width: 90vw;
-
-  padding: 3.5rem 2rem 0 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-.section4 .projects-container .project-card {
-  flex-direction: column;
-  color: var(--text-color);
-}
-.section4 img {
-  width: 100%;
-  height: 250px;
-  border-radius: 12px;
-}
-
-.section4 .projects-container .project-card .botton p {
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-}
-.section4 .projects-container .project-card .botton p:nth-child(2) {
-  margin-top: 1.2rem;
-  font-weight: bold;
-}
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .section4 .projects-container {
     width: 100vw;
     padding: 3rem 0.5rem;
@@ -749,8 +769,6 @@ a {
       font-family: "Protest Riot", sans-serif;
     }
     h4 {
-      color: #6b0fc7;
-      background-color: #88c76b; /* Yellow background color */
       padding: 5px; /* Add some padding for better readability */
       border-radius: 20px; /* Optional: Add rounded corners */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
@@ -777,7 +795,7 @@ a {
   }
 }
 
-@media (width <= 1024px) {
+@media (max-width: 1024px) {
   .section5 .about-container {
     flex-direction: column;
   }
@@ -790,17 +808,16 @@ a {
     justify-content: center;
   }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .section5 .about-container {
     width: 100vw;
   }
+
   .section5 .about-container .right h1 {
     font-size: 1.5rem;
   }
-  .section5 .about-container .right div {
-    width: 80%;
-    justify-content: center;
-    margin: 0 auto;
+  .section5 .about-container .right {
+    width: fit-content;
   }
 }
 
@@ -850,9 +867,15 @@ a {
   }
 }
 
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .section6 .social {
-    gap: 3rem;
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* Styles for iPhone 4 */
+  .section6 .social {
+    gap: 1rem;
   }
 }
 
