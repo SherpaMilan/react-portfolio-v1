@@ -815,9 +815,7 @@ a {
 
   .section5 .about-container .right h1 {
     font-size: 1.5rem;
-  }
-  .section5 .about-container .right {
-    width: fit-content;
+    justify-content: center;
   }
 }
 
